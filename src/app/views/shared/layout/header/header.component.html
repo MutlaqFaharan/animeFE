@@ -1,1 +1,32 @@
-<p>header works!</p>
+<section>
+  <mat-toolbar>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon [matMenuTriggerFor]="sideMenu">menu</mat-icon>
+      <mat-menu #sideMenu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="settings">
+          {{ "header.sideNav.options.settings" | translate }}
+        </button>
+        <button mat-menu-item>
+          {{ "header.sideNav.options.logout" | translate }}
+        </button>
+      </mat-menu>
+      <mat-menu #settings="matMenu">
+        <button mat-menu-item>
+          {{ "header.sideNav.options.profile" | translate }}
+        </button>
+        <button mat-menu-item>
+          {{ "header.sideNav.options.dashboard" | translate }}
+        </button>
+        <button mat-menu-item>
+          {{ "header.sideNav.options.feed" | translate }}
+        </button>
+      </mat-menu>
+    </button>
+    <span class="example-spacer"></span>
+    <button (click)="changeLanguage()"><mat-icon>language</mat-icon></button>
+  </mat-toolbar>
+</section>

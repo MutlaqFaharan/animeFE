@@ -1,0 +1,75 @@
+@use "src/assets/styles/variables" as variables;
+@use "src/assets/styles/padding" as padding;
+@use "src/assets/styles/colors" as colors;
+
+.footer {
+  width: 100%;
+  background-color: colors.$main-color;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  width: 80%;
+  max-width: 1280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  background: rgb(18, 29, 56);
+}
+
+.footer-text {
+  margin: 0px 15px;
+  cursor: default;
+  user-select: none;
+}
+
+.footer-item {
+  color: white;
+  text-decoration: none;
+  margin: 5px 0px;
+  padding: 5px 10px 5px 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: 20px 0px;
+  border-left: solid white 1px;
+  padding: 0px 50px;
+}
+
+.footer-item:hover {
+  background: rgb(18, 29, 56);
+}
+
+@media (max-width: 770px) {
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .links {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: solid white 1px;
+  }
+}

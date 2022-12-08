@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: '',
+  API: 'https://animebe-production.up.railway.app/api/',
 };
 
 /*

@@ -1,0 +1,10 @@
+@use "src/assets/styles/variables" as variables;
+@use "src/assets/styles/padding" as padding;
+@use "src/assets/styles/colors" as colors;
+
+section {
+  background-color: colors.$secondary-color;
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+}

@@ -1,0 +1,90 @@
+// about us page
+.language-barier[dir="rtl"] {
+  .we-believe {
+    transform: scaleX(-1);
+    flex-direction: row;
+    margin-right: -2px;
+
+    .background-text {
+      h1 {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .text-and-empty-div {
+    transform: scaleX(-1);
+    flex-direction: row-reverse;
+
+    h1 {
+      transform: scaleX(-1);
+      text-align: start;
+    }
+  }
+
+  .intro-info {
+    transform: scaleX(-1);
+    flex-direction: row-reverse;
+
+    .with-us {
+      place-items: flex-end !important;
+    }
+
+    h2,
+    h4,
+    a {
+      transform: scaleX(-1);
+      text-align: right;
+    }
+  }
+
+  .info-2 {
+    justify-content: center;
+
+    .illustration {
+      display: none;
+    }
+  }
+
+  .our-services {
+    .online-consultation-img,
+    .office-hours-img,
+    .private-tutor-img {
+      transform: scaleX(-1);
+    }
+
+    .service-body {
+      transform: scaleX(-1);
+    }
+
+    .service {
+      justify-items: baseline !important;
+    }
+
+    .private-tutor-img {
+      justify-items: end !important;
+    }
+  }
+
+  .become-marketer {
+    .become-body {
+      flex-direction: row-reverse !important;
+    }
+  }
+
+  .become-instructor {
+    .become-body {
+      flex-direction: row !important;
+
+      .content {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .reviews {
+    flex-direction: row-reverse;
+  }
+}

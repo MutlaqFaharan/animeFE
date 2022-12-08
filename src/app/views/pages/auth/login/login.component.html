@@ -1,1 +1,44 @@
-<p>login works!</p>
+<section>
+  <div class="login-box">
+    <h2>{{ "login.login" | translate }}</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="user-box">
+        <input type="text" formControlName="email" />
+        <label>{{ "login.form.email" | translate }}</label>
+        <div
+          *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="email?.errors?.['required']">
+            {{
+              "validation.required"
+                | translate : { value: "login.form.email" | translate }
+            }}
+          </div>
+        </div>
+      </div>
+      <div class="user-box">
+        <input type="password" formControlName="password" />
+        <label>{{ "login.form.password" | translate }}</label>
+        <div
+          *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+          class="alert alert-danger"
+        >
+          <div *ngIf="password?.errors?.['required']">
+            {{
+              "validation.required"
+                | translate : { value: "login.form.password" | translate }
+            }}
+          </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        {{ "buttons.submit" | translate }}
+      </button>
+    </form>
+  </div>
+</section>

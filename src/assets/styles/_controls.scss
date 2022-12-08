@@ -1,0 +1,90 @@
+.form-elements {
+  &__form-field {
+    padding: 0 10px;
+    margin: 3px 0;
+  }
+  &__textarea {
+    padding: 0 10px;
+    margin: 3px 0;
+  }
+  &__select {
+    padding: 0 10px;
+    margin: 3px 0;
+  }
+  &__radio-btn {
+    & mat-radio-button {
+      margin: 5px 10px 10px;
+    }
+  }
+  &__checkbox {
+    & mat-checkbox {
+      margin: 5px 10px 10px;
+    }
+  }
+  &__chips {
+    & mat-checkbox {
+      margin: 5px 10px 10px;
+    }
+  }
+
+  & .mat-form-field {
+    width: 100%;
+
+    &-appearance-outline {
+      & .mat-form-field-infix {
+        padding: 0.8rem 0 !important;
+        border-top: 0.4rem solid transparent;
+      }
+
+      &.mat-form-field-can-float {
+        &.mat-form-field-should-float .mat-form-field-label,
+        &
+          .mat-input-server:focus
+          + .mat-form-field-label-wrapper
+          .mat-form-field-label {
+          transform: translateY(-1.2rem) scale(0.75);
+        }
+      }
+
+      &.mat-focused .mat-form-field-outline-thick {
+        color: $sec-color;
+        ~ & .mat-form-field-suffix .mat-icon {
+          opacity: 1;
+        }
+      }
+
+      &:not(.mat-form-field-disabled)
+        .mat-form-field-flex:hover
+        .mat-form-field-outline-thick {
+        opacity: 0.7;
+      }
+
+      & .mat-form-field-prefix,
+      & .mat-form-field-suffix {
+        top: 0.5em;
+      }
+      & .mat-form-field-outline-thick {
+        & .mat-form-field-outline-start,
+        & .mat-form-field-outline-end,
+        & .mat-form-field-outline-gap {
+          border-width: 1px !important;
+        }
+      }
+
+      &.mat-focused.mat-warn .mat-form-field-outline-thick,
+      &.mat-form-field-invalid.mat-form-field-invalid
+        .mat-form-field-outline-thick {
+        color: $danger-color;
+      }
+      &.mat-form-field-disabled .mat-form-field-outline {
+        color: $gray-color;
+        background-color: $disabled-color;
+        border-radius: 4px;
+      }
+    }
+    &-suffix .mat-icon {
+      font-size: $medium-icon;
+      opacity: 54%;
+    }
+  }
+}

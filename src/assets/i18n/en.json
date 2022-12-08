@@ -1,0 +1,48 @@
+{
+  "header": {
+    "sideNav": {
+      "options": {
+        "profile": "Profile",
+        "logout": "Logout",
+        "dashboard": "Dashboard",
+        "feed": "Feed",
+        "settings": "Settings"
+      }
+    }
+  },
+  "footer": {
+    "about": "About",
+    "aboutParagraph": "This Project Came To Birth After Witnessing The Absence of a decent Anime Platform, After Years Of Being In The Anime Communities, This Project's Main Goal Is to Provide a World Class Platform For The Communities",
+    "quickLinks": {
+      "quickLinks": "Quick Links",
+      "profile": "Profile",
+      "logout": "Logout",
+      "dashboard": "Dashboard",
+      "feed": "Feed",
+      "settings": "Settings"
+    }
+  },
+  "login": {
+    "login": "Login",
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "forgetPassword": "Forget Password"
+    }
+  },
+  "errors": {
+    "auth": "You Must Be Logged In First"
+  },
+  "validation": {
+    "required": "{{value}} Must Be Provided"
+  },
+  "common": {
+    "error": "Something Went Wrong!",
+    "success": "Success!",
+    "warning": "Warning",
+    "info": "Info!"
+  },
+  "buttons": {
+    "submit": "Submit"
+  }
+}

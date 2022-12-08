@@ -12,7 +12,7 @@ export class ToastService {
   ) {}
 
   toastrOptions = {
-    timeOut: 1000,
+    timeOut: 5000,
     closeButton: true,
     progressBar: true,
   };
@@ -42,7 +42,7 @@ export class ToastService {
     );
   };
 
-  _onApiSuccess = (data: any) => {
-    this.showSuccess(this.translate.instant('general.success'), data);
+  _onApiSuccess = (description: string) => {
+    this.showSuccess(this.translate.instant('general.success'), description);
   };
 }
