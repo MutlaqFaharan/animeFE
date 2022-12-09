@@ -11,6 +11,7 @@ export class AuthService {
   constructor(private readonly api: APIService) {}
 
   login(loginData: LoginData): Observable<{ token: string }> {
+    debugger;
     return this.api.post(Constants.AUTH_PATH + 'login', loginData);
   }
 }
