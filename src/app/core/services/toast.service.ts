@@ -34,15 +34,37 @@ export class ToastService {
   }
 
   _onApiError = (error: any) => {
-    this.showError(
-      this.translate.instant('general.error'),
-      error?.error?.errors?.length > 0
-        ? error?.error?.errors?.join(',') || ''
-        : error.error.error
-    );
+    let translationSubscriber$ = this.translate
+      .get('common.error', 'errors.auth')
+      .subscribe((translated: string) => {
+        this.showError(
+          this.translate.instant('common.error'),
+          error?.error?.errors?.length > 0
+            ? error?.error?.errors?.join(',') || ''
+            : error.error.error
+        );
+      });
+    translationSubscriber$.unsubscribe();
   };
 
   _onApiSuccess = (description: string) => {
-    this.showSuccess(this.translate.instant('general.success'), description);
+    let translationSubscriber$ = this.translate
+      .get('common.error', 'errors.auth')
+      .subscribe((translated: string) => {
+        this.showSuccess(this.translate.instant('common.success'), description);
+      });
+    translationSubscriber$.unsubscribe();
   };
+
+  _noLoggedInUser() {
+    let translationSubscriber$ = this.translate
+      .get('errors.auth')
+      .subscribe((translated: string) => {
+        this.showSuccess(
+          this.translate.instant('common.error'),
+          this.translate.instant('errors.auth')
+        );
+      });
+    translationSubscriber$.unsubscribe();
+  }
 }

@@ -33,8 +33,13 @@
   "errors": {
     "auth": "You Must Be Logged In First"
   },
+  "success": {
+    "login": "Logged in Successfully"
+  },
   "validation": {
-    "required": "{{value}} Must Be Provided"
+    "required": "{{value}} Must Be Provided",
+    "minLength": "{{value}} Must be More than {{length}}",
+    "email": "Email Must be Correct"
   },
   "common": {
     "error": "Something Went Wrong!",

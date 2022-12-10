@@ -12,8 +12,18 @@
           <div *ngIf="email?.errors?.['required']">
             {{
               "validation.required"
-                | translate : { value: "login.form.email" | translate }
+                | translate : { value: ("login.form.email" | translate) }
             }}
+          </div>
+          <div *ngIf="email?.errors?.['minlength']">
+            {{
+              "validation.minLength"
+                | translate
+                  : { value: ("login.form.email" | translate), length: email?.errors?.['minlength'].requiredLength }
+            }}
+          </div>
+          <div *ngIf="email?.errors?.['email']">
+            {{ "validation.email" | translate }}
           </div>
         </div>
       </div>
@@ -27,7 +37,15 @@
           <div *ngIf="password?.errors?.['required']">
             {{
               "validation.required"
-                | translate : { value: "login.form.password" | translate }
+                | translate : { value: ("login.form.password" | translate) }
+            }}
+          </div>
+
+          <div *ngIf="password?.errors?.['minlength']">
+            {{
+              "validation.minLength"
+                | translate
+                  : { value: ("login.form.password" | translate), length:password?.errors?.['minlength'].requiredLength }
             }}
           </div>
         </div>
