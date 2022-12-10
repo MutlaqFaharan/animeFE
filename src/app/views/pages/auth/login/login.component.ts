@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import { SessionService } from 'src/app/core/services/session.service';
+import { ToastService } from 'src/app/core/services/toast.service';
 import { LoginForm } from 'src/app/core/shared/interfaces/forms/login-form.interface';
 import { AuthService } from '../auth.service';
 
@@ -13,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private readonly fb: NonNullableFormBuilder,
-    private readonly authService: AuthService
+    private readonly authService: AuthService,
+    private sessionService: SessionService,
+    private readonly toast: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -38,6 +42,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.login(this.loginForm.value);
+    this.authService.login(this.loginForm.value).subscribe({
+      next: (res) => {
+        this.sessionService.initLoggedInUser(res.token);
+      },
+      error: (error) => {
+        this.toast._onApiError(error);
+      },
+      complete: () => {},
+    });
   }
 }

@@ -33,8 +33,13 @@
   "errors": {
     "auth": "يجب تسجيل الدخول"
   },
+  "success": {
+    "login": "تم تسجيل الدخول بنجاح"
+  },
   "validation": {
-    "required": "يجب ادخال {{ value }}"
+    "required": "يجب ادخال {{ value }}",
+    "minLength": "يجب ان يكون {{value}} اكبر من {{length}}",
+    "email": "يجب ان يكون الايميل صحيح"
   },
   "common": {
     "error": "حدث خطأ",
